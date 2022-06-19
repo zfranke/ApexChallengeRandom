@@ -24,7 +24,7 @@ customtkinter.set_appearance_mode("System")
 customtkinter.set_default_color_theme("blue")
 
 app = customtkinter.CTk()
-app.geometry("500x300")
+app.geometry("400x300")
 app.title("Apex Legends Randomizer")
 
 

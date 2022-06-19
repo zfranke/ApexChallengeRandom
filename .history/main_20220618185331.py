@@ -10,7 +10,7 @@ apexWeapons =["Havoc Rifle", "VK-47 Flatline", "Hemlok Burst AR", "R-301 Carbine
               "Charge Rifle", "Longbow DMR", "Kraber", "Sentinel", "EVA-8 Auto", "Mastiff", "Mozambique", "Peacekeeper", "RE-45 Auto", "P2020", "Wingman"]
 
 
-def randomize():
+def randomize(self):
     #Randomize the character
     label_Legend.config(
         text=apexCharacters[random.randint(0, len(apexCharacters) - 1)])
@@ -24,28 +24,31 @@ customtkinter.set_appearance_mode("System")
 customtkinter.set_default_color_theme("blue")
 
 app = customtkinter.CTk()
-app.geometry("500x300")
+app.geometry("400x580")
 app.title("Apex Legends Randomizer")
 
 
 frame = customtkinter.CTkFrame(master=app)
 frame.pack(pady=20, padx=60, fill="both", expand=True)
 
-label = customtkinter.CTkLabel(master=frame, text="Apex Legends Randomizer", text_font=("Roboto Medium", -24), justify = tkinter.LEFT)
+label = customtkinter.CTkLabel(master=frame, text="Apex Legends Randomizer", text_font=("Roboto Medium", -16), justify = tkinter.LEFT)
 label.pack(pady=12, padx=10)
 
 label_Legend = customtkinter.CTkLabel(master=frame, text="Legend", text_font=(
-    "Roboto Medium", -16), justify=tkinter.LEFT)
+    "Roboto Medium", -12), justify=tkinter.LEFT)
 label_Legend.pack(pady=12, padx=10)
 
 label_Weapon = customtkinter.CTkLabel(master=frame, text="Weapon", text_font=(
-    "Roboto Medium", -16), justify=tkinter.LEFT)
-label_Weapon.pack(pady=12, padx=10)
+    "Roboto Medium", -12), justify=tkinter.LEFT)
+label_Legend.pack(pady=12, padx=10)
            
 button = customtkinter.CTkButton(
     master=frame, text="Randomize", command=randomize)
 button.pack(pady=12, padx=10)
            
+#Function called randomzie that will put a random character and weapon into the labels
+
+
 
 app.mainloop()
 
