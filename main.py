@@ -1,5 +1,5 @@
 
-#Characters
+#Character List
 import customtkinter
 import tkinter.messagebox
 import tkinter
